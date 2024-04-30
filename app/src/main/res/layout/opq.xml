@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/t"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:text="Edit Data"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/t"
+        android:id="@+id/e"
+        android:hint="Enter Email Id"
+        android:textColorHint="@color/primary"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/e"
+        android:id="@+id/p"
+      app:endIconMode="password_toggle"
+        app:endIconTint="@color/primary"
+        android:hint="Enter Pwd"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/primary"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:hintTextColor="@color/primary"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pwd"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/p"
+        android:id="@+id/c"
+        android:hint="Enter City"
+        android:textColorHint="@color/primary"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:hintTextColor="@color/primary"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        app:endIconTint="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/rgb"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/c"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <RadioButton
+            android:id="@+id/f"
+            android:textColor="@color/primary"
+            android:text="Female"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <RadioButton
+            android:id="@+id/m"
+            android:textColor="@color/primary"
+            android:text="Male"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RadioGroup>
+
+    <CheckBox
+        android:layout_marginLeft="20dp"
+        android:id="@+id/dd"
+        android:textColor="@color/primary"
+        android:text="Dancing"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_below="@+id/rgb"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"/>
+
+    <CheckBox
+        android:layout_marginLeft="120dp"
+        android:id="@+id/r"
+        android:textColor="@color/primary"
+        android:text="Reading"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_below="@+id/rgb"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnc"
+        android:layout_below="@+id/dd"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/primary"
+        android:textColor="@color/white"
+        android:text="Cancel"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btne"
+        android:layout_below="@+id/dd"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/primary"
+        android:textColor="@color/white"
+        android:text="Add"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"/>
+
+</RelativeLayout>
